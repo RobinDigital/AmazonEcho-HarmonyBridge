@@ -17,5 +17,5 @@ http://www.ag-software.net/agsxmpp-sdk/
 
 And added my own stuff.
 
-
+First ever GitHub project, let me know if I've done something stupid
 
