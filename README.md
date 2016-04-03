@@ -1,10 +1,13 @@
 # AmazonEcho-HarmonyBridge
 Amazon Echo to Logitech Harmony Bridge
 
-C# code that emulates an Hue Bridge, connects to Harmony Hub, enables Amazon Echo to find and use Harmony activities
-Runs on Windows and Linux (tested using Mono on a Synology NAS)
-
+If you just want to use the application get the files from "Compiled Application"
 On first run, it will create a settings.xml file, you'll have to fill in the Logitech Harmony credentials and the IP of the server/pc you're running on which you want to use.
+
+
+
+This is C# code that emulates an Hue Bridge, connects to Harmony Hub, enables Amazon Echo to find and use Harmony activities
+Runs on Windows and Linux (tested using Mono on a Synology NAS)
 
 It should be easily extended, but will need some serious clean-up :)
 
