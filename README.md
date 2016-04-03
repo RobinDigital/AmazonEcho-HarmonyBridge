@@ -13,6 +13,8 @@ https://github.com/hdurdle/harmony
 
 https://github.com/armzilla/amazon-echo-ha-bridge
 
+http://www.ag-software.net/agsxmpp-sdk/
+
 And added my own stuff.
 
 
