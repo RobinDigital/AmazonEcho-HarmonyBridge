@@ -1,0 +1,11 @@
+D:\users\rt\Downloads\Transfer\harmony-master\agsxmpp\bin\Net35\Debug\agsXMPP.dll.config
+D:\users\rt\Downloads\Transfer\harmony-master\agsxmpp\bin\Net35\Debug\agsXMPP.dll
+D:\users\rt\Downloads\Transfer\harmony-master\agsxmpp\bin\Net35\Debug\agsXMPP.pdb
+D:\users\rt\Downloads\Transfer\harmony-master\agsxmpp\obj\Debug\agsXMPP.dll
+D:\users\rt\Downloads\Transfer\harmony-master\agsxmpp\obj\Debug\agsXMPP.pdb
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\agsxmpp\bin\Net35\Debug\agsXMPP.dll.config
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\agsxmpp\bin\Net35\Debug\agsXMPP.dll
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\agsxmpp\bin\Net35\Debug\agsXMPP.pdb
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\agsxmpp\obj\Debug\agsXMPP.dll
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\agsxmpp\obj\Debug\agsXMPP.pdb
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\agsxmpp\obj\Debug\agsXMPP2008.csprojResolveAssemblyReference.cache

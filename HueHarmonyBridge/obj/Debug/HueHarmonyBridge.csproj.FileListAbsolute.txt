@@ -1,0 +1,13 @@
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\HueHarmonyBridge.exe.config
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\HueHarmonyBridge.exe
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\HueHarmonyBridge.pdb
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\obj\Debug\HueHarmonyBridge.exe
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\obj\Debug\HueHarmonyBridge.pdb
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\obj\Debug\HueHarmonyBridge.csprojResolveAssemblyReference.cache
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\HarmonyHub.dll
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\agsXMPP.dll
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\HarmonyHub.pdb
+d:\users\rt\documents\visual studio 2013\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\agsXMPP.pdb
+C:\Users\robin\Documents\Visual Studio 2015\Projects\HueHarmonyBridge\HueHarmonyBridge\bin\Debug\HueHarmonyBridge.exe.config
+C:\Users\robin\Documents\Visual Studio 2015\Projects\HueHarmonyBridge\HueHarmonyBridge\obj\Debug\HueHarmonyBridge.exe
+C:\Users\robin\Documents\Visual Studio 2015\Projects\HueHarmonyBridge\HueHarmonyBridge\obj\Debug\HueHarmonyBridge.pdb

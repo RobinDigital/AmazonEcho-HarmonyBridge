@@ -1,0 +1,14 @@
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\bin\Debug\HarmonyHub.dll
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\bin\Debug\HarmonyHub.pdb
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\bin\Debug\agsXMPP.dll
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\obj\Debug\HarmonyHub.dll
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\obj\Debug\HarmonyHub.pdb
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\obj\Debug\HarmonyHub.csprojResolveAssemblyReference.cache
+D:\users\rt\Downloads\Transfer\harmony-master\HarmonyHub\bin\Debug\agsXMPP.pdb
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\bin\Debug\HarmonyHub.dll
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\bin\Debug\HarmonyHub.pdb
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\bin\Debug\agsXMPP.dll
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\bin\Debug\agsXMPP.pdb
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\obj\Debug\HarmonyHub.csprojResolveAssemblyReference.cache
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\obj\Debug\HarmonyHub.dll
+D:\users\rt\Documents\Visual Studio 2013\Projects\HueHarmonyBridge\HarmonyHub\obj\Debug\HarmonyHub.pdb

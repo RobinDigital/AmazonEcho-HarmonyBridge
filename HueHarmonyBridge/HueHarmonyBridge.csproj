@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{050C978C-AB19-402B-A040-BC9EC40F19C3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HueHarmonyBridge</RootNamespace>
+    <AssemblyName>HueHarmonyBridge</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="device.cs" />
+    <Compile Include="HClient.cs" />
+    <Compile Include="HttpServer\CertProperties.cs" />
+    <Compile Include="HttpServer\CryptContext.cs" />
+    <Compile Include="HttpServer\CryptKey.cs" />
+    <Compile Include="HttpServer\DisposableObject.cs" />
+    <Compile Include="HttpServer\KeyExchangeKey.cs" />
+    <Compile Include="HttpServer\KeyType.cs" />
+    <Compile Include="HttpServer\Mime.cs" />
+    <Compile Include="HttpServer\SignatureKey.cs" />
+    <Compile Include="HttpServer\SimpleHttpServer.cs" />
+    <Compile Include="HttpServer\Win32ErrorHelper.cs" />
+    <Compile Include="HttpServer\Win32Native.cs" />
+    <Compile Include="HubSettings.cs" />
+    <Compile Include="JSON\jsonhandler.cs" />
+    <Compile Include="Mono.Ssdp.Internal\AsyncReceiveBuffer.cs" />
+    <Compile Include="Mono.Ssdp.Internal\HttpDatagram.cs" />
+    <Compile Include="Mono.Ssdp.Internal\HttpDatagramType.cs" />
+    <Compile Include="Mono.Ssdp.Internal\Log.cs" />
+    <Compile Include="Mono.Ssdp.Internal\MulticastSsdpSocket.cs" />
+    <Compile Include="Mono.Ssdp.Internal\NetworkInterfaceInfo.cs" />
+    <Compile Include="Mono.Ssdp.Internal\NotifyListener.cs" />
+    <Compile Include="Mono.Ssdp.Internal\Protocol.cs" />
+    <Compile Include="Mono.Ssdp.Internal\RequestListener.cs" />
+    <Compile Include="Mono.Ssdp.Internal\ServiceCache.cs" />
+    <Compile Include="Mono.Ssdp.Internal\SsdpSocket.cs" />
+    <Compile Include="Mono.Ssdp.Internal\TimeoutDispatcher.cs" />
+    <Compile Include="Mono.Ssdp\Announcer.cs" />
+    <Compile Include="Mono.Ssdp\Browser.cs" />
+    <Compile Include="Mono.Ssdp\BrowseService.cs" />
+    <Compile Include="Mono.Ssdp\Client.cs" />
+    <Compile Include="Mono.Ssdp\MulticastReader.cs" />
+    <Compile Include="Mono.Ssdp\Server.cs" />
+    <Compile Include="Mono.Ssdp\Service.cs" />
+    <Compile Include="Mono.Ssdp\ServiceArgs.cs" />
+    <Compile Include="Mono.Ssdp\ServiceHandler.cs" />
+    <Compile Include="Mono.Ssdp\ServiceOperation.cs" />
+    <Compile Include="MyHttpServer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HarmonyHub\HarmonyHub.csproj">
+      <Project>{561d5f22-2ccf-4d84-a677-eb54cc39afbf}</Project>
+      <Name>HarmonyHub</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
