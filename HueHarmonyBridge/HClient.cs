@@ -19,7 +19,7 @@ namespace HueHarmonyBridge
             password = pass;
             if (!String.IsNullOrEmpty(HubSettings.Instance.HarmonySession))
             {
-                Console.WriteLine("HARMONY - Reusing token: {0}", HubSettings.Instance.HarmonySession);
+                Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Reusing token: {0}", HubSettings.Instance.HarmonySession);
             }
             else
             {
@@ -32,7 +32,7 @@ namespace HueHarmonyBridge
             string userAuthToken = HarmonyLogin.GetUserAuthToken(email, password);
             if (string.IsNullOrEmpty(userAuthToken))
             {
-                throw new Exception("HARMONY - Could not get token from Logitech server.");
+                throw new Exception(DateTime.Now.ToShortTimeString() +  " HARMONY - Could not get token from Logitech server.");
             }
             
 
@@ -41,13 +41,13 @@ namespace HueHarmonyBridge
             string sessionToken = authentication.SwapAuthToken(userAuthToken);
             if (string.IsNullOrEmpty(sessionToken))
             {
-                throw new Exception("Could not swap token on Harmony Hub.");
+                throw new Exception(DateTime.Now.ToString()+" HARMONY - Could not swap token on Harmony Hub.");
             }
 
 
-            Console.WriteLine("HARMONY - Date Time : {0}", DateTime.Now);
-            Console.WriteLine("HARMONY - User Token: {0}", userAuthToken);
-            Console.WriteLine("HARMONY - Sess Token: {0}", sessionToken);
+            Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Date Time : {0}", DateTime.Now);
+            Console.WriteLine(DateTime.Now.ToString()+" HARMONY - User Token: {0}", userAuthToken);
+            Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Sess Token: {0}", sessionToken);
 
             return sessionToken;
         }
@@ -72,7 +72,7 @@ namespace HueHarmonyBridge
                  int.TryParse(activity.id,out id);
                  if (id != -1)
                  {
-                     Console.WriteLine("HARMONY - Activity {0}:{1}", activity.id, activity.label);
+                     Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Activity {0}:{1}", activity.id, activity.label);
                      devices.Add(id, new device(activity.label, false));
                  }
              }             

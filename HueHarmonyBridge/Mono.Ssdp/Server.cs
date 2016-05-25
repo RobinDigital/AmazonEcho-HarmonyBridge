@@ -90,7 +90,14 @@ namespace Mono.Ssdp
             request_listener = new RequestListener (this);
             announcers = new Dictionary<string, Announcer> ();
         }
-      
+        public Server(string defaultLocation, NetworkInterface networkInterface,String server_ip)
+        {
+            default_location = defaultLocation;
+            network_interface_info = NetworkInterfaceInfo.GetNetworkInterfaceInfo(networkInterface,server_ip);
+            request_listener = new RequestListener(this);
+            announcers = new Dictionary<string, Announcer>();
+        }
+
         public Announcer Announce (string type, string name)
         {
             return Announce (type, name, default_location, true);

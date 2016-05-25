@@ -34,7 +34,7 @@ namespace Mono.Ssdp.Internal
     class MulticastSsdpSocket : SsdpSocket
     {
         public MulticastSsdpSocket (NetworkInterfaceInfo networkInterfaceInfo)
-            : base (networkInterfaceInfo.Address)
+            : base (IPAddress.Any)//changed from binding on IP to ANY for Mono
         {
             SetSocketOption (SocketOptionLevel.Socket, SocketOptionName.Broadcast, true);
             SetSocketOption (SocketOptionLevel.IP, SocketOptionName.MulticastTimeToLive, Protocol.SocketTtl);

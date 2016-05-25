@@ -26,7 +26,7 @@ namespace HueHarmonyBridge
 
             if (HubSettings.Instance.HarmonyUser=="user@email.com")
             {
-                Console.WriteLine("Please fill in the settings.xml file with a value for HarmonyUser, HarmonyPass and IPToUse");
+                Console.WriteLine(DateTime.Now.ToString()+" Please fill in the settings.xml file with a value for HarmonyUser, HarmonyPass and IPToUse");
             }
             else
             {
@@ -34,29 +34,29 @@ namespace HueHarmonyBridge
                 int server_port = 5999;
                 NetworkInterface serverInterface = findInterface(server_ip);
                 String harmonyHubIP = findHarmonyHub(serverInterface);
-                Console.WriteLine("HARMONY - Loading activities");
+                Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Loading activities");
 
                 HClient harmonyClient = new HClient(harmonyHubIP,HubSettings.Instance.HarmonyUser,HubSettings.Instance.HarmonyPass);
                 Dictionary<int, device> devices = harmonyClient.findActivities();
                 if (devices != null)
                 {
-                    Console.WriteLine("HARMONY - Connected");
+                    Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Connected");
 
-                    Console.WriteLine("Starting UPNP server for " + server_ip);
-                    Mono.Ssdp.Server discoveryServer = new Mono.Ssdp.Server("http://" + server_ip + ":" + server_port.ToString() + "/description.xml", serverInterface);
+                    Console.WriteLine(DateTime.Now.ToString()+" Starting UPNP server for " + server_ip);
+                    Mono.Ssdp.Server discoveryServer = new Mono.Ssdp.Server("http://" + server_ip + ":" + server_port.ToString() + "/description.xml", serverInterface,server_ip);
                     discoveryServer.Announce("upnp:rootdevice", "HueHarmony", "http://" + server_ip + ":" + server_port.ToString() + "/description.xml", true);
                     discoveryServer.Announce("urn:schemas-upnp-org:device:basic:1", "HueHarmony2", "http://" + server_ip + ":" + server_port.ToString() + "/description.xml", true);
-                    Console.WriteLine("Started UPNP server for " + server_ip);
+                    Console.WriteLine(DateTime.Now.ToString()+" Started UPNP server for " + server_ip);
 
-                    Console.WriteLine("Starting HTTP server for " + server_ip + ":" + server_port);
+                    Console.WriteLine(DateTime.Now.ToString()+" Starting HTTP server for " + server_ip + ":" + server_port);
                     MyHttpServer httpServer = new MyHttpServer(server_ip, server_port, devices);
                     Thread threadHttp = new Thread(new ThreadStart(httpServer.Start));
                     threadHttp.Start();
-                    Console.WriteLine("Started HTTP server for " + server_ip + ":" + server_port);
+                    Console.WriteLine(DateTime.Now.ToString()+" Started HTTP server for " + server_ip + ":" + server_port);
                 }
                 else
                 {
-                    Console.WriteLine("HARMONY - No activities ... Quiting");
+                    Console.WriteLine(DateTime.Now.ToString()+" HARMONY - No activities ... Quiting");
                 }
             }
         }

@@ -61,7 +61,6 @@ namespace Mono.Ssdp.Internal
         {
             lock (mutex) {
                 Stop ();
-
                 socket = new MulticastSsdpSocket (server.NetworkInterfaceInfo);
                 socket.Bind ();
                 AsyncReadResult (socket);

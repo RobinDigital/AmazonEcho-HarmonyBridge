@@ -25,7 +25,7 @@ namespace HueHarmonyBridge
         }
         public override void handleGETRequest(SimpleHttp.HttpProcessor p)
         {
-            Console.WriteLine("HTTP server responding to GET " + p.request_url.AbsolutePath.ToString() + " from " + p.RemoteIPAddress.ToString());
+            Console.WriteLine(DateTime.Now.ToString()+" HTTP server responding to GET " + p.request_url.AbsolutePath.ToString() + " from " + p.RemoteIPAddress.ToString());
             if (p.request_url.ToString().Contains("description.xml"))
             {
                 writeDescription(p);
@@ -72,7 +72,7 @@ namespace HueHarmonyBridge
         }
         public override void handlePUTRequest(SimpleHttp.HttpProcessor p, StreamReader inputData)
         {
-            Console.WriteLine("HTTP server responding to PUT " + p.request_url.AbsolutePath.ToString() + " from " + p.RemoteIPAddress.ToString());
+            Console.WriteLine(DateTime.Now.ToString()+" HTTP server responding to PUT " + p.request_url.AbsolutePath.ToString() + " from " + p.RemoteIPAddress.ToString());
             string data = p.RawPostParams["TEXT"];
             
             if (p.request_url.AbsolutePath.ToLower().StartsWith("/api/") && p.request_url.AbsolutePath.ToLower().EndsWith("/state"))
@@ -87,14 +87,14 @@ namespace HueHarmonyBridge
                 {
                     case "{\"on\": true}":
                         devices[lightID].State = true;
-                        Console.WriteLine("HARMONY - Starting activity " + devices[lightID].Name);
+                        Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Starting activity " + devices[lightID].Name);
                         harmonyClient = new HClient(HubSettings.Instance.HarmonyHubIP, HubSettings.Instance.HarmonyUser, HubSettings.Instance.HarmonyPass);
                         harmonyClient.StartActivity(lightID);
                         p.outputStream.WriteLine("{\"success\":{\"/lights/"+lightID+"/state/on\":true}}");
                         break;
                     case "{\"on\": false}":
                         devices[lightID].State = false;
-                        Console.WriteLine("HARMONY - Ending activity " + devices[lightID].Name);
+                        Console.WriteLine(DateTime.Now.ToString()+" HARMONY - Ending activity " + devices[lightID].Name);
                         harmonyClient = new HClient(HubSettings.Instance.HarmonyHubIP, HubSettings.Instance.HarmonyUser, HubSettings.Instance.HarmonyPass);
                         harmonyClient.EndActivity(lightID);
                         p.outputStream.WriteLine("{\"success\":{\"/lights/"+lightID+"/state/on\":false}}");
@@ -109,7 +109,7 @@ namespace HueHarmonyBridge
         public override void handlePOSTRequest(SimpleHttp.HttpProcessor p, StreamReader inputData)
         {
             string data = inputData.ReadToEnd();
-            Console.WriteLine("HTTP server responding to POST " + p.request_url.AbsolutePath.ToString() + " from " + p.RemoteIPAddress.ToString());
+            Console.WriteLine(DateTime.Now.ToString()+" HTTP server responding to POST " + p.request_url.AbsolutePath.ToString() + " from " + p.RemoteIPAddress.ToString());
             //new StringContent(body, Encoding.UTF8, "application/json")
             if (p.request_url.AbsolutePath.ToLower() == "/api")
             {

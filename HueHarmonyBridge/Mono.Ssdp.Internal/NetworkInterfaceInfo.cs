@@ -67,6 +67,32 @@ namespace Mono.Ssdp.Internal
             throw new ArgumentException (string.Format (
                 "The specified network interface does not have a suitable address for the local hostname: {0}.", host_name), "networkInterface");
         }
+        public static NetworkInterfaceInfo GetNetworkInterfaceInfo(NetworkInterface networkInterface, String server_ip)
+        {
+            if (networkInterface == null)
+            {
+                return new NetworkInterfaceInfo(IPAddress.Any, 0);
+            }
+            var properties = networkInterface.GetIPProperties();
+            var ipv4_properties = properties.GetIPv4Properties();
+            if (ipv4_properties == null)
+            {
+                throw new ArgumentException("The specified network interface does not support IPv4.", "networkInterface");
+            }
+            var host_name = Dns.GetHostName();
+            foreach (var address in properties.UnicastAddresses)
+            {
+                
+             
+                if (address.Address.AddressFamily == AddressFamily.InterNetwork && address.Address.ToString()==server_ip)
+                {
+                    Console.WriteLine(DateTime.Now.ToShortTimeString()+ " UPNP bonded on " + host_name);
+                    return new NetworkInterfaceInfo(address.Address, ipv4_properties.Index);
+                }
+            }
+            throw new ArgumentException(string.Format(
+                "The specified network interface does not have a suitable address for the local hostname: {0}.", host_name), "networkInterface");
+        }
     }
 }
 
